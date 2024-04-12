@@ -12,40 +12,33 @@
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    animation: fadeIn 1s ease-in-out forwards; /* Fade-in effect */
     overflow: hidden; /* Hide page scrollbars */
   }
 
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
+  /* Display the full-screen welcome section */
   .fullscreen {
-    position: fixed;
-    top: 0;
-    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 100%;
     background: url('https://p.sda1.dev/16/7931111adc8303a50ee9073dedd8f826/截屏2024-04-09 10.17.06.png') no-repeat center center;
-    background-size: contain; /* Ensure background image fully covers and maintains aspect ratio */
+    background-size: contain;
     color: #fff;
     font-size: 2em;
     cursor: pointer;
     z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
-  /* Display as orange bar on mobile devices */
+  /* Orange bar on mobile devices */
   @media (max-width: 768px) {
     .fullscreen {
       background: url('https://p.sda1.dev/16/74e1ebabfebf7a8b4388e4608d071a16/截屏2024-04-11 13.11.58.png') no-repeat center center;
-      background-size: contain; /* Ensure background image fully covers and maintains aspect ratio */
+      background-size: contain;
     }
   }
 
+  /* Grid layout */
   .gridLayout {
     display: none;
     width: 100%;
@@ -105,6 +98,11 @@
     max-width: 100vw;
     max-height: 100vh;
   }
+
+  /* Hide the title and content of the third page */
+  #thirdPage {
+    display: none;
+  }
 </style>
 </head>
 <body>
@@ -117,8 +115,8 @@
   <div class="gridItem" style="background: url('https://p.sda1.dev/16/7931111adc8303a50ee9073dedd8f826/截屏2024-04-09 10.17.06.png') no-repeat center center; background-size: contain;" onclick="window.location.href='file:///Users/taianqi/Desktop/9.html';"></div>
 </div>
 
-<div id="thirdPage" style="display:none;">
-  <div>Content of the third page</div>
+<div id="thirdPage">
+  <div></div>
 </div>
 
 <script>
