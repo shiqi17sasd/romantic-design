@@ -100,7 +100,7 @@
   }
 
   /* Hide the title and content of the third page */
-  #thirdPage {
+  #thirdPage, #secondPage {
     display: none;
   }
 </style>
@@ -115,13 +115,18 @@
   <div class="gridItem" style="background: url('https://p.sda1.dev/16/7931111adc8303a50ee9073dedd8f826/截屏2024-04-09 10.17.06.png') no-repeat center center; background-size: contain;" onclick="window.location.href='file:///Users/taianqi/Desktop/9.html';"></div>
 </div>
 
+<div id="secondPage">
+  <!-- Second page content goes here -->
+</div>
+
 <div id="thirdPage">
-  <div></div>
+  <!-- Third page content goes here -->
 </div>
 
 <script>
   var welcomeScreen = document.getElementById('welcomeScreen');
   var gridLayout = document.getElementById('gridLayout');
+  var secondPage = document.getElementById('secondPage');
   var thirdPage = document.getElementById('thirdPage');
 
   welcomeScreen.addEventListener('click', function() {
